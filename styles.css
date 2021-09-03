@@ -57,7 +57,12 @@ input:focus {
     background-color: #f6f6f6;
 }
 
-.slogan>h2, p {
+.slogan > h2 {
+    text-align: center;
+    margin: 0em 3em 0.5em 3em;
+}
+
+.slogan p {
     text-align: center;
     margin: 0em 3em 0.5em 3em;
 }
@@ -118,13 +123,6 @@ nav > ul {
     list-style: none;
 }
 
-a.textefonctionnement {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
 nav > ul > li  {
     display: flex;
     align-items: center;
@@ -154,9 +152,17 @@ nav > ul > li > p {
     left: -0.7em;
     width: 1.5em;
     height: 1.5em;
+    margin: 0;
     color: white;
     background-color: #9356dc;
     border-radius: 50%;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .iconfonctionnement {
@@ -167,7 +173,7 @@ nav > ul > li > p {
 
 /* Section "Restaurants" */
 
-#boxmainrestaurants {
+#sectionrestaurants {
     padding: 3em 1em 3em 1em;
     background-color: #f6f6f6;
 }
@@ -186,14 +192,14 @@ h2 {
     list-style: none;
 }
 
-.lirestaurants {
+ul.ulrestaurants > li {
     height: 15.5em;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0px 4px 8px 2px rgb(228, 228, 228);
 }
 
-.figurerestaurants {
+ul.ulrestaurants > li > figure{
     position: relative;
     width: 100%;
     height: 11em;
@@ -201,25 +207,29 @@ h2 {
     border-radius: 15px;
 }
 
+.imgnouveau {
+    position: relative;
+}
+.imgnouveau div {
+    position: relative;
+}
 .nouveau {
     text-align: center;
     position: absolute;
-    left: 16.5em;
-    bottom: 7em;
-    right: 29em;
+    left: em;
+    bottom: em;
     width: 4.5em;
     padding: 0.5em;
     font-weight: bold;
-    color: rgb(30, 150, 110);
+    color: rgb(22, 121, 88);
     background-color: #99e2d0;
     border-radius: 3px;
 }
 
 .imgrestaurants {
     width: 100%;
-    height: 100%;
+    height: 11em;
     border-radius: 15px 15px 0px 0px;
-    ;
     object-fit: cover;
 }
 
@@ -232,27 +242,17 @@ h2 {
     padding: 0em 1em;
 }
 
-.texterestaurants1, .texterestaurants2 {
-    margin: 0em;
-}
-
-.texterestaurants1 {
+.texterestaurants {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 0.3em;
 }
 
-.coeur {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
 .coeurvide {
     z-index: 2;
     position: absolute;
-    bottom: -11px;
-    right: 0.5em;
+    bottom: -10px;
+    right: 1em;
     font-size: 1.4em;
     color: black;
     background-color: white;
@@ -261,11 +261,12 @@ h2 {
 .coeurfull {
     z-index: 1;
     position: absolute;
-    right: 0.5em;
+    right: 1em;
     font-size: 1.4em;
     background: linear-gradient( #e981dc, #9d59dc);
+    background-clip: padding-box;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 .coeurvide:hover {
@@ -328,20 +329,28 @@ h4 {
 /* Footer */
 
 footer {
-    padding: 1em 1em;
+    padding: 1em 2em;
     color: white;
     background-color: #353535;
 }
 
-.imgomffooter {
+footer > img {
     filter: invert(100%);
     width: 6em;
-    height: 3em;
+    height: 2.5em;
 }
 
-.textelogofooter {
+footer > div {
     display: flex;
     align-items: center;
+}
+
+footer > p {
+    margin: 0.3em 0;
+}
+
+footer div p {
+    margin: 0.3em 0em;
 }
 
 .iconfooter {
@@ -353,6 +362,3 @@ footer {
     width: 10px;
 }
 
-.textefooter {
-    margin: 0.2em;
-}
