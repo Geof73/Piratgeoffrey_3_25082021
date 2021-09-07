@@ -1,8 +1,24 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
+    background-color: white;
+
 }
 
+.loader {
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+   transition:  4s;
+    opacity: 1;
+}
+.loader::after{
+    opacity:0;
+}
 .titreomf {
     display: flex;
     justify-content: center;
@@ -11,9 +27,12 @@ body {
     margin: 0 auto;
     padding: 1em;
 }
+
 .fleche {
-    position: absolute; left: 1.5em;
+    position: absolute;
+    left: 1.5em;
 }
+
 /* Page index*/
 
 /* Section "boxinformation" */
@@ -25,12 +44,14 @@ body {
     height: 3em;
     background: linear-gradient( #b4b2b2a9 3%, #b4b2b27a 8%, #eaeaea 75%);
 }
-.gpssearch>div{
+
+.gpssearch>div {
     position: relative;
 }
+
 .gps {
     position: absolute;
-    top: 12px;
+    top: 11px;
     left: -20px
 }
 
@@ -53,11 +74,10 @@ input:focus {
     align-items: center;
     justify-content: center;
     height: 16em;
-    margin-bottom: 2em;
     background-color: #f6f6f6;
 }
 
-.slogan > h2 {
+.slogan>h2 {
     text-align: center;
     margin: 0em 3em 0.5em 3em;
 }
@@ -76,13 +96,15 @@ input:focus {
     z-index: 1;
     position: relative;
     margin: 1.5em 0;
-    padding: 1em 2em ;
+    padding: 1em 2em;
     color: white;
     border-radius: 25px;
-    background-image: linear-gradient( to top , #9d59dc, #e981dc);
+    background-image: linear-gradient( to top, #9356DC, #FF79DA);
+    box-shadow: 0px 0px 20px 10px rgb(221, 221, 221);
+    cursor: pointer;
 }
 
-.btnenr::before {
+.btnenr::after {
     z-index: -1;
     position: absolute;
     content: "";
@@ -93,14 +115,20 @@ input:focus {
     left: 0;
     transition: opacity 0.5s linear;
     opacity: 0;
-    background-image: linear-gradient( to bottom , #9d59dc, #e981dc);
-    box-shadow:0px 0px 10px 3px rgb(179, 179, 179);
+    background-image: linear-gradient( to bottom, #a278d6, #fa92dd);
+    box-shadow: 0px 0px 10px 3px rgb(187, 187, 187);
 }
 
-.btnenr:hover::before {
+.btnenr:hover::after {
     opacity: 1;
-    /* transform: scale(1.02);
-    box-shadow: 0px 0px 10px 10px rgb(233, 233, 233);*/
+    cursor: pointer;
+}
+
+/* Titre h2 fonctionnement et restaurants */
+
+header>h2 {
+    display: flex;
+    justify-content: center;
 }
 
 /* Section Fonctionnement */
@@ -110,41 +138,42 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     margin: 2em 1em;
+    gap: 1em;
 }
 
-nav > ul {
+nav>ul {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    height: 20em;
-    margin: 0em 0.5em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     padding: 0;
     gap: 2em;
     list-style: none;
 }
 
-nav > ul > li  {
+nav>ul>li {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 1.5em;
-    border-radius: 20px;
+    width: 100%;
+    max-width: 50%;
+    padding: 1.8em;
+    border-radius: 25px;
     background-color: #f6f6f6;
     box-shadow: 0px 4px 8px 2px rgb(228, 228, 228);
     transition: ease-in-out 0.3s;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-nav > ul > li:hover {
-    background-color: #f5edff;
+nav>ul>li:hover {
+    background-color: white;
     box-shadow: 0px 4px 8px 2px rgb(204, 204, 204);
 }
 
-nav > ul > li:hover>.iconfonctionnement {
-    color: #9356dc;
-}
-
-nav > ul > li > p {
+nav>ul>li>p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,20 +183,31 @@ nav > ul > li > p {
     height: 1.5em;
     margin: 0;
     color: white;
-    background-color: #9356dc;
+    background-color: #9356DC;
     border-radius: 50%;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    width: 15em;
+    margin-left: 3em;
     text-decoration: none;
     color: black;
-    font-weight: bold;
-    font-size: 1.1em;
 }
 
-.iconfonctionnement {
+.li3 {
+    background-color: #9256dc25;
+}
+
+.pink {
+    color: #9356DC;
+}
+
+nav>ul>li>i {
     position: absolute;
-    left: 2.5em;
+    left: 2.2em;
     color: #7e7e7e;
 }
 
@@ -178,28 +218,26 @@ nav > ul > li > a {
     background-color: #f6f6f6;
 }
 
-h2 {
-    margin: 0;
-}
-
 .ulrestaurants {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 1em 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 4em;
     padding: 0;
-    gap: 1em;
+    gap: 2em;
     list-style: none;
 }
 
-ul.ulrestaurants > li {
+ul.ulrestaurants>li {
+    width: 40%;
     height: 15.5em;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0px 4px 8px 2px rgb(228, 228, 228);
+    cursor: pointer;
 }
 
-ul.ulrestaurants > li > figure{
+ul.ulrestaurants>li>figure {
     position: relative;
     width: 100%;
     height: 11em;
@@ -207,17 +245,11 @@ ul.ulrestaurants > li > figure{
     border-radius: 15px;
 }
 
-.imgnouveau {
-    position: relative;
-}
-.imgnouveau div {
-    position: relative;
-}
-.nouveau {
+ul.ulrestaurants>li>figure>p {
     text-align: center;
     position: absolute;
-    left: em;
-    bottom: em;
+    right: 1em;
+    bottom: 7em;
     width: 4.5em;
     padding: 0.5em;
     font-weight: bold;
@@ -226,7 +258,7 @@ ul.ulrestaurants > li > figure{
     border-radius: 3px;
 }
 
-.imgrestaurants {
+ul.ulrestaurants>li>figure>img {
     width: 100%;
     height: 11em;
     border-radius: 15px 15px 0px 0px;
@@ -237,25 +269,36 @@ ul.ulrestaurants > li > figure{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 3em;
-    margin-top: 0.5em;
+    height: 4em;
     padding: 0em 1em;
 }
 
-.texterestaurants {
+.texterestaurants1 {
     font-weight: bold;
     font-size: 1.1em;
-    margin-bottom: 0.3em;
+    margin: 0 0 0.2em 0;
+}
+
+.texterestaurants2 {
+    margin: 0;
+}
+
+.figcaptionrestaurants>span {
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .coeurvide {
     z-index: 2;
     position: absolute;
-    bottom: -10px;
+    bottom: -11px;
     right: 1em;
     font-size: 1.4em;
     color: black;
     background-color: white;
+    
+    
 }
 
 .coeurfull {
@@ -263,17 +306,46 @@ ul.ulrestaurants > li > figure{
     position: absolute;
     right: 1em;
     font-size: 1.4em;
-    background: linear-gradient( #e981dc, #9d59dc);
-    background-clip: padding-box;
+    background: linear-gradient( #e981dc, #9356DC);
     -webkit-background-clip: text;
-    color: transparent;
+
 }
 
 .coeurvide:hover {
     opacity: 0;
     transition: 200ms;
+    
 }
 
+/* Responsive index.html */
+
+@media screen and (max-width: 769px) {
+    .slogan>h2 {
+        margin: 0.5em 2em
+    }
+    header>h2 {
+        justify-content: left;
+        margin: 0;
+    }
+    #sectionfonctionnement {
+        gap: 0;
+    }
+    nav>ul {
+        gap: 1em
+    }
+    nav>ul>li {
+        max-width: 100%;
+        width: 80%;
+    }
+    .ulrestaurants {
+        flex-direction: column;
+        gap: 1em;
+        margin: 1em 0;
+    }
+    ul.ulrestaurants>li {
+        width: 100%;
+    }
+}
 
 /* Page Menu - À la française */
 
@@ -285,7 +357,8 @@ ul.ulrestaurants > li > figure{
 
 .sectionalf {
     z-index: 2;
-    position: relative; bottom: 2em;
+    position: relative;
+    bottom: 2em;
     background-color: #f6f6f6;
     border-radius: 30px;
     padding: 2em 0;
@@ -299,7 +372,7 @@ ul.ulrestaurants > li > figure{
     margin: 0 1em;
 }
 
-.lientrees{
+.lientrees {
     display: flex;
     background-color: white;
     border-radius: 10px;
@@ -320,12 +393,6 @@ h4 {
     font-size: 0.8em;
 }
 
-
-
-
-
-
-
 /* Footer */
 
 footer {
@@ -334,23 +401,32 @@ footer {
     background-color: #353535;
 }
 
-footer > img {
+footer>img {
     filter: invert(100%);
     width: 6em;
     height: 2.5em;
 }
 
-footer > div {
+footer>div {
     display: flex;
     align-items: center;
 }
 
-footer > p {
+footer>p {
     margin: 0.3em 0;
 }
 
 footer div p {
     margin: 0.3em 0em;
+}
+
+.contact {
+    color: white;
+    text-decoration: none;
+}
+
+.contact:hover {
+    color: #9356DC;
 }
 
 .iconfooter {
@@ -361,4 +437,3 @@ footer div p {
     margin-left: 0.5em;
     width: 10px;
 }
-
