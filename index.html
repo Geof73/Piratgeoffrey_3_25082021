@@ -9,26 +9,38 @@
     <!--Icône Font Awesome-->
     <script src="https://kit.fontawesome.com/5aabf6eecd.js" crossorigin="anonymous"></script>
 
+
     <link rel="stylesheet" href="styles.css" type="text/css">
 
     <!--Font google Raleway-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
     <title>Ohmyfood</title>
 </head>
 
 <body>
 
-    <!--Loader
+    <!--Loader-->
 
     <div class="loader">
-        <img src="images/logo/ohmyfood@2x.svg" alt="">
+        <div class="cercle">
+            <div class="texteohmyfood">
+                <p>oh</p>
+                <p>my</p>
+                <p>food</p>
+            </div>
+            <div class="barredechargement">
+                <div class="chargement"></div>
+            </div>
+        </div>
+    </div>
+    <!--Header-->
 
-    </div>-->
-
-    <!--Header--> 
-    
     <header id="entete">
         <img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood">
     </header>
@@ -46,8 +58,8 @@
             </div>
             <div class="slogan">
                 <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a href="#sectionrestaurants"><button class="btnenr" type="button">Explorer nos restaurants</button></a>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p><button class="btnenr"
+                    type="button">Explorer nos restaurants</button>
             </div>
         </section>
 
@@ -58,20 +70,26 @@
             </header>
             <nav id="fonctionnement">
                 <ul>
-                    <li onclick='window.location.href=""'>
-                        <p>1</p>
-                        <i class="fas fa-mobile-alt"></i>
-                        Choisissez un restaurant
+                    <li>
+                        <a href="#">
+                            <p>1</p>
+                            <i class="fas fa-mobile-alt"></i>
+                            Choisissez un restaurant
+                        </a>
                     </li>
-                    <li onclick='window.location.href=""'>
-                        <p>2</p>
-                        <i class="fas fa-list"></i>
-                        Composez votre menu
+                    <li>
+                        <a href="#">
+                            <p>2</p>
+                            <i class="fas fa-list"></i>
+                            Composez votre menu
+                        </a>
                     </li>
-                    <li class="li3" onclick='window.location.href=""'>
-                        <p>3</p>
-                        <i class="fas fa-store pink"></i>
-                        Dégustez au restaurant
+                    <li class="li3">
+                        <a href="#">
+                            <p>3</p>
+                            <i class="fas fa-store pink"></i>
+                            Dégustez au restaurant
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -83,68 +101,78 @@
                 <h2>Restaurants</h2>
             </header>
             <ul class="ulrestaurants">
-                <li onclick='window.location.href="menulapalettedugout.html"'>
-                    <figure>
-                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-                        <p>Nouveau</p>
-                        <figcaption class="figcaptionrestaurants">
-                            <div>
-                                <p class="texterestaurants1">La palette du goût</p>
-                                <p class="texterestaurants2">Ménilmontant</p>
-                            </div>
-                            <span>
-                                <a href=""><i class="far fa-heart coeurvide"></i></a>
-                                <i class="fas fa-heart coeurfull"></i>
-                            </span>
-                        </figcaption>
-                    </figure>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                            <p>Nouveau</p>
+                            <figcaption class="figcaptionrestaurants">
+                                <div>
+                                    <p class="texterestaurants1">La palette du goût</p>
+                                    <p class="texterestaurants2">Ménilmontant</p>
+                                </div>
+                                <span>
+                                    <i class="far fa-heart coeurvide"></i>
+                                    <i class="far fa-heart coeurplein"></i>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
                 </li>
-                <li onclick='window.location.href="menulanoteenchantee.html"'>
-                    <figure>
-                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
-                        <p>Nouveau</p>
-                        <figcaption class="figcaptionrestaurants">
-                            <div>
-                                <p class="texterestaurants1">La note enchantée</p>
-                                <p class="texterestaurants2">Charonne</p>
-                            </div>
-                            <span>
-                                <a href=""><i class="far fa-heart coeurvide"></i></a>
-                                <i class="fas fa-heart coeurfull"></i>
-                            </span>
-                        </figcaption>
-                    </figure>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                            <p>Nouveau</p>
+                            <figcaption class="figcaptionrestaurants">
+                                <div>
+                                    <p class="texterestaurants1">La note enchantée</p>
+                                    <p class="texterestaurants2">Charonne</p>
+                                </div>
+                                <span>
+                                    <i class="far fa-heart coeurvide"></i>
+                                    <i class="far fa-heart coeurplein"></i>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
                 </li>
-                <li onclick='window.location.href="menualafrancaise.html"'>
-                    <figure>
-                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
-                        <figcaption class="figcaptionrestaurants">
-                            <div>
-                                <p class="texterestaurants1">À la française</p>
-                                <p class="texterestaurants2">Cité Rouge</p>
-                            </div>
-                            <span>
-                                <a href=""><i class="far fa-heart coeurvide"></i></a>
-                                <i class="fas fa-heart coeurfull"></i>
-                            </span>
-                        </figcaption>
-                    </figure>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                            <figcaption class="figcaptionrestaurants">
+                                <div>
+                                    <p class="texterestaurants1">À la française</p>
+                                    <p class="texterestaurants2">Cité Rouge</p>
+                                </div>
+                                <span>
+                                    <i class="far fa-heart coeurvide"></i>
+                                    <i class="far fa-heart coeurplein"></i>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
                 </li>
-                <li onclick='window.location.href="menuledelicedessens.html"'>
-                    <figure>
-                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                            alt="">
-                        <figcaption class="figcaptionrestaurants">
-                            <div>
-                                <p class="texterestaurants1">La délice des sens</p>
-                                <p class="texterestaurants2">Folie-Méricourt</p>
-                            </div>
-                            <span>
-                                <a href=""><i class="far fa-heart coeurvide"></i></a>
-                                <i class="fas fa-heart coeurfull"></i>
-                            </span>
-                        </figcaption>
-                    </figure>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                            <figcaption class="figcaptionrestaurants">
+                                <div>
+                                    <p class="texterestaurants1">La délice des sens</p>
+                                    <p class="texterestaurants2">Folie-Méricourt</p>
+                                </div>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                        class="bi bi-heart heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                    </svg>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
                 </li>
             </ul>
         </section>
@@ -162,7 +190,7 @@
             <p>Devenir partenaire</p>
         </div>
         <p>Mentions légales</p>
-        <a class="contact" href="mailto:contact@ohmyfood.com">Contact</p>
+        <a class="contact" href="mailto:contact@ohmyfood.com">Contact</a>
     </footer>
 </body>
 
