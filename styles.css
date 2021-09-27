@@ -4,6 +4,8 @@ body {
     background-color: white;
 }
 
+/* Loader spinner */
+
 .loader {
     z-index: 999;
     display: flex;
@@ -169,15 +171,22 @@ body {
     }
 }
 
-/* Entete */
+/* Titre "ohmyfood","Fonctionnement" et "Restaurants" */ 
 
 #entete {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header p {
+    z-index: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     margin: 0 auto;
-    padding: 1em;
+    font-family: Shrikhand;
+    font-size: 3em;
 }
 
 header h2 {
@@ -187,8 +196,9 @@ header h2 {
 }
 
 header a {
+    z-index: 2;
     position: absolute;
-    left: 1.5em;
+    left: 1em;
     top: 1em;
     text-decoration: none;
     color: black;
@@ -210,9 +220,11 @@ header a:hover {
     transition: 0.5s;
 }
 
-/* Page index*/
+/* Page index */
 
-/* Section "boxinformation" */
+/* Section Information */
+
+/* Partie "GPS" */
 
 .gpssearch {
     display: flex;
@@ -245,6 +257,8 @@ input:focus {
     outline: none;
 }
 
+/* Partie "Slogan" */
+
 .slogan {
     display: flex;
     flex-direction: column;
@@ -268,6 +282,8 @@ input:focus {
     text-align: center;
     margin: 0 2em 1.5em 2em;
 }
+
+/* Boutton "Explorer nos restaurants" */
 
 .slogan a {
     z-index: 1;
@@ -301,13 +317,6 @@ input:focus {
     opacity: 1;
     cursor: pointer;
     padding: 1em 1.5em;
-}
-
-/* Titre h2 fonctionnement et restaurants */
-
-#entete {
-    display: flex;
-    justify-content: center;
 }
 
 /* Section Fonctionnement */
@@ -511,6 +520,7 @@ nav ul li a i {
     content: "\f004";
     position: absolute;
     background-image: linear-gradient( to top, #9356DC, #FF79DA);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -523,6 +533,7 @@ nav ul li a i {
 
 .coeur:hover>.coeurvide::before {
     background-image: linear-gradient( to top, #9356DC, #FF79DA);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -726,7 +737,7 @@ main img {
     filter: brightness(1.10);
 }
 
-/* Boutton Commander */
+/* Boutton "Commander" */
 
 .boutton {
     display: flex;
@@ -775,10 +786,13 @@ footer {
     background-color: #353535;
 }
 
-footer img {
-    filter: invert(100%);
-    width: 6em;
-    height: 2.5em;
+footer p{
+    margin: 0.2em 0em;
+}
+
+footer p:nth-child(1) {
+    margin-bottom: 0.7em;
+    font-family: Shrikhand;
 }
 
 footer div {
@@ -786,13 +800,9 @@ footer div {
     align-items: center;
 }
 
-footer p {
-    margin: 0.3em 0em;
-}
-
 .contact {
     position: relative;
-    top: 0.3em;
+    top: 0.1em;
     color: white;
     text-decoration: none;
 }
@@ -810,12 +820,29 @@ footer p {
     width: 10px;
 }
 
+/* Responsive */
+
 @media screen and (max-width: 769px) {
-    /* Responsive index.html */
     
+    /* Loader spinner */
+
+    header a {
+        top:0.3em
+    }
+    .cercle {
+        animation: none;
+        visibility: hidden;
+    }
     .texteohmyfood{
         margin : 0;
     }
+
+    /* Page index.html */
+
+    #entete p {
+        font-size: 2em;
+    }
+    
     .slogan h2 {
         margin: 0.5em 2em
     }
@@ -841,7 +868,9 @@ footer p {
     ul.ulrestaurants>li {
         width: 100%;
     }
-    /* Responsive page menu */
+
+    /* Page menu */
+
     main img {
         width: 100%;
         height: 14em;
@@ -875,9 +904,5 @@ footer p {
     }
     #menu ul li:hover>span {
         width: 15%;
-    }
-    .cercle {
-        animation: none;
-        visibility: hidden;
     }
 }
