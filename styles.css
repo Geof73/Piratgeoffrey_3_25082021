@@ -356,7 +356,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: white;
+    background-color: #9256dc25;;
     box-shadow: 0px 4px 8px 2px rgb(204, 204, 204);
 }
 
@@ -387,14 +387,6 @@ nav ul li a {
     padding: 1.8em;
     text-decoration: none;
     color: black;
-}
-
-.li3 {
-    background-color: #9256dc25;
-}
-
-.pink {
-    color: #9356DC;
 }
 
 nav ul li a i {
@@ -567,7 +559,11 @@ main img {
 }
 
 .entete h2 {
+    white-space: nowrap;
+    width: 69%;
     font-family: Shrikhand;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Partie menu */
@@ -662,7 +658,7 @@ main img {
 }
 
 #menu ul li a h4 {
-    width: 100%;
+    width: 75%;
     margin: 0;
     padding: 0.6em 0 0.5em 0.5em;
     overflow: hidden;
